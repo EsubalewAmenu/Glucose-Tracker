@@ -1,60 +1,108 @@
-Poultry Farm Management System: TelelBirds
-==========================================
+# Glucose Guardian: A Django-Based Blood Glucose Tracker
 
-**The Chicken came before the Egg**
+![Glucose Guardian Banner](https://placehold.co/1200x400/6399BE/FFFFFF?text=Glucose%20Guardian)
 
-A web-based application and platform for keeping track of the entire production system of a Poultry farm,from breeding, egg production, hatchery to chicks management. Written in Python using the Django framework.
+**Glucose Guardian** is a user-friendly web application built with Django to help individuals securely track, manage, and share their blood glucose data. It provides essential tools for monitoring health trends and facilitating better communication with healthcare providers.
 
-<b>Main Site:</b> https://www.telelbirds.com - HATCHING SOON!
+The application is fully open-source, mobile-friendly, and designed with data privacy and ease-of-use in mind.
 
-<b>Features:</b>
+---
 
-* <b>Simple, easy to use.</b>  Entering glucose data should be faster than finding a pen and paper and writing down the number.  Fields have pre-set values where it makes sense (such as the date, time, and category based on time of day).
-* <b>Send notifications via email/sms.</b>  Email it to your doctor before your visit, no more carrying log books (and you're saving trees)!  Can be sent as a CSV or PDF attachment.
-* <b>Reporting.</b>  Simple reports to see how you're doing.  Highlight how many times you have lows and highs. Show averages by day and category using nice-looking charts and graphs.
-* <b>Data filtering.</b>  Advanced filtering: filter by glucose range, date range, category, tag, and notes.
-* <b>Tagging.</b>  An optional tag field to help further organize and make sense of your data. For example, it might be useful to add tags to a record such as: exercise, sick, insulin, fasting, etc.
-* <b>Expenditure estimation.</b>  Estimate expenditures based on data from the last 3 months.
-* <b>Import data from CSV.</b> Import existing data from other software/systems.
-* <b>Mobile friendly.</b>  Layout adapts to screen size.
+## ✨ Key Features
 
+* **Comprehensive Tracking:** Log blood glucose readings with date, time, and relevant notes.
+* **A1C Estimation:** Automatically calculates an estimated A1C based on your logged data to track long-term trends.
+* **Advanced Data Filtering:** Easily filter and view your data by date range or time of day (e.g., "before breakfast," "after lunch").
+* **Data Import/Export:**
+    * **Import:** Easily import your existing glucose data from a CSV file.
+    * **Export:** Generate and download your health reports in both **CSV** and **PDF** formats.
+* **Secure Sharing:** Share your generated PDF reports directly with your healthcare provider via email.
+* **Responsive Design:** A clean and adaptive interface that works seamlessly on both desktop and mobile devices.
 
-<b>Systems:</b>
+---
 
-* <b>Hatchery.</b> Track incubators capacity and availability for Setting and Incubation Services.
-* <b>Chicks.</b> Track a clutch of chicks or multiple batches on the farm.
-* <b>Breeders.</b> Track and monitor several breeders of poultry and other birds. 
-* <b>Medication Schedules.</b>
-* <b>Tagging.</b>
-* <b>Finance.</b>
-* <b>Deliveries.</b>
-* <b>Mobile friendly.</b>
+## 🛠️ Technology Stack
 
-<b>Some point in the future: 2021:</b>
+* **Backend:** Python 3.x, Django Framework
+* **Database:** SQLite (default, easily configurable)
+* **Frontend:** HTML5, CSS3, JavaScript
+* **Key Python Libraries:**
+    * `pandas` for data manipulation (CSV import/export).
+    * `reportlab` for PDF generation.
 
-* A simple TelelBird Android app that works offline and auto-syncs with the remote database via REST calls.
+---
 
+## 🚀 Getting Started
 
-Installation/Running the App
-----------------------------
+Follow these instructions to get a local copy of the project up and running for development and testing purposes.
 
-1. Install the required libraries listed in the requirements file with pip: *pip install -r requirements.txt*
-2. If you just want to run a demo of the app, use the <b>local_demo.py</b> file which uses an SQLite database and will be created automatically. Otherwise, for development, please use PostgreSQL and the local_settings.py file.  Set the database settings and environment variables accordingly.
-3. Run the makemigration command: e.g. *python manage.py makemigration --noinput --settings=settings.local_demo*
-4. Run the migration: e.g. *python manage.py migrate --settings=settings.local_demo*
-5. (Optional) Populate your database with dummy data: e.g. *python manage.py load_random_breed_data admin --settings=settings.local_demo* (note that 'telelbirds' can be changed to any username you like, the password will always be 'demo').
-6. Run the local web server: e.g. *python manage.py runserver --settings=settings.local_demo*
+### Prerequisites
 
-3rd-Party Apps/Libraries/Plugins
---------------------------------
+* Python 3.8 or higher
+* pip (Python package installer)
+* Git
 
-TelelBirds uses the following:
+### Installation & Setup
 
-* Twitter Bootstrap 3 (http://getbootstrap.com)
-* South (http://south.aeracode.org)
-* Django Crispy Forms (http://django-crispy-forms.readthedocs.org/en/latest)
-* Django Braces (http://django-braces.readthedocs.org/en/v1.2.2/)
-* Django Compressor (http://django-compressor.readthedocs.org/en/latest/)
-* Bootstrap DateTimePicker (http://eonasdan.github.io/bootstrap-datetimepicker/)
-* Datatables (http://datatables.net)
-* Highcharts (http://www.highcharts.com/)/ AMCHARTS
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/EsubalewAmenu/Glucose-Tracker.git
+    cd Glucose-Tracker
+    ```
+
+2.  **Create and activate a virtual environment:**
+    * On macOS/Linux:
+        ```sh
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+    * On Windows:
+        ```sh
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+
+3.  **Install the required dependencies:**
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4.  **Apply database migrations:**
+    ```sh
+    python manage.py migrate
+    ```
+
+5.  **Create a superuser to access the admin panel (optional):**
+    ```sh
+    python manage.py createsuperuser
+    ```
+    Follow the prompts to create your admin account.
+
+### Running the Application
+
+1.  **Start the Django development server:**
+    ```sh
+    python manage.py runserver
+    ```
+
+2.  **Open your web browser** and navigate to `http://127.0.0.1:8000/` to see the application in action.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+1.  **Fork the Project**
+2.  **Create your Feature Branch** (`git checkout -b feature/AmazingFeature`)
+3.  **Commit your Changes** (`git commit -m 'Add some AmazingFeature'`)
+4.  **Push to the Branch** (`git push origin feature/AmazingFeature`)
+5.  **Open a Pull Request**
+
+---
+
+## 📜 License
+
+This project is distributed under the MIT License. See `LICENSE.txt` for more information.
