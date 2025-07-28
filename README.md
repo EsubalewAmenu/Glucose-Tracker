@@ -36,7 +36,11 @@ The application is fully open-source, mobile-friendly, and designed with data pr
 
 Follow these instructions to get a local copy of the project up and running for development and testing purposes.
 
+**Dashboard Screenshot**
 ![Dashboard Screenshot](screenshots/dashboard.jpg)
+
+
+**Add Record Screenshot**
 ![Add Record Screenshot](screenshots/add_record.jpg)
 
 ### Prerequisites
